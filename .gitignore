@@ -1,0 +1,5 @@
+.env
+*.db
+basic_auth.ini
+__pycache__/
+*.pyc
