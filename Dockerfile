@@ -9,7 +9,7 @@ WORKDIR /app
 
 # mlflow<3 keeps the basic-auth + serve-artifacts flags used here stable;
 # psycopg2-binary = Postgres driver, boto3 = S3/R2 client.
-RUN pip install --no-cache-dir "mlflow<3" psycopg2-binary boto3
+RUN pip install --no-cache-dir "mlflow<3" mlflow[auth] psycopg2-binary boto3
 
 COPY entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
